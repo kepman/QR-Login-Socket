@@ -1,3 +1,4 @@
+require('dotenv').config()
 const bodyParser = require("body-parser");
 const express = require("express");
 const http = require("http");
@@ -83,6 +84,6 @@ io.on("connection", (socket) => {
   }
 });
 
-httpServer.listen((PORT ?? 443), () => {
-  console.log("listening on port " + (PORT ?? "443"));
+httpServer.listen(process.env.PORT, () => {
+  console.log("listening on port " + process.env.PORT);
 });
