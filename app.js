@@ -83,6 +83,6 @@ io.on("connection", (socket) => {
   }
 });
 
-httpServer.listen(3000, () => {
-  console.log("listening on port 3000");
+httpServer.listen(443, () => {
+  console.log("listening on port 443");
 });
